@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+
+<!-- Head -->
+<head>
+
+<title>Home</title>
+
+<!-- For-Mobile-Apps -->
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="" />
+<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+<!-- //For-Mobile-Apps -->
+
+<!-- Style --> <link rel="stylesheet" href="css/style.css" type="text/css" media="all" />
+
+<!-- Web-Fonts -->
+<link href='http://fonts.useso.com/css?family=Oxygen:400,300,700' rel='stylesheet' type='text/css'>
+<link href='http://fonts.useso.com/css?family=Open+Sans:400,600,700' rel='stylesheet' type='text/css'>
+<link href='http://fonts.useso.com/css?family=Raleway:100,200' rel='stylesheet' type='text/css'>
+<!-- //Web-Fonts -->
+
+
+<style>
+
+.forecast{
+	padding:0 225px 0 225px ;
+}
+</style>
+
+</head>
+<!-- Head -->
+
+
+
+<!-- Body -->
+<body onload="startTime()">
+
+
+    
+	<!-- Heading -->
+	<div class="logo">
+		<img src="images/网页LOGO.png" width="200" height="200"/>
+		
+	
+	<!-- //Headng -->
+	
+	</div>
+	
+		<nav>
+		<ul>
+		<li><a href="callme.html"<>联系我们</a></li><br />
+		<li><a href="aboutme.html"<>关于我们</a></li>
+		</ul>
+		</nav>
+	
+	<h1>EatWhat 今天吃点啥？</h1>
+		
+	
+
+
+		<!-- Container -->
+		<div class="container">
+
+			<!-- City -->
+			<div class="city">
+				<div class="title">
+					<h2>今日推荐！</h2>
+					<h3>猛戳！</h3>
+				</div>
+				<iframe src="indexzp.html"width="800" height="800"></iframe>
+				<div class="date-time">
+					<div class="dmy">
+						<div id="txt"></div>
+						<div class="date">
+							<!-- Date-JavaScript -->
+							<script type="text/javascript">
+							var mydate=new Date()
+							var year=mydate.getYear()
+							if(year<1000)
+							year+=1900
+							var day=mydate.getDay()
+							var month=mydate.getMonth()
+							var daym=mydate.getDate()
+							if(daym<10)
+							daym="0"+daym
+							var dayarray=new Array("Sunday(星期天)","Monday(星期一)","Tuesday(星期二)","Wednesday(星期三)","Thursday(星期四)","Friday(星期五)","Saturday(星期六)")
+							var montharray=new Array("January","February","March","April","May","June","July","August","September","October","November","December")
+							document.write(""+dayarray[day]+", "+montharray[month]+" "+daym+", "+year+"")
+							</script>
+							<!-- //Date-JavaScript -->
+						</div>
+					</div>
+					<div class="temperature">
+						<p>35°<span>C</span></p>
+					</div>
+					<div class="clear"></div>
+				</div>
+			</div>
+			<!-- //City -->
+
+
+
+			<!-- Forecast -->
+			<div class="forecast">
+				<div class="forecast-icon">
+					<img src="images/美国佬头像.png" alt="New York Weather Widget" width="150" height="150">
+				</div>
+				<div class="today-weather">
+					<h3>美国佬<br />★★★★</h3>
+					
+					<ul>
+						<li><a href='https://www.ele.me/shop/393422'>妈咪哄<span> ★★★★</span></li>
+						<li><a href='https://www.ele.me/shop/190843'>印象快餐<span> ★★★★</span></li>
+						<li><a href='https://www.ele.me/shop/511521'>爱民螺蛳粉 <span> ★★★★</span></li>
+						<li><a href='https://www.ele.me/shop/942477'>蜀烩冒菜 <span> ★★★★</span></li>
+						<li><a href='https://www.ele.me/shop/407226'>金汉城&菜茶茉 <span> ★★★</span></li>
+					</ul>
+				</div>
+			</div>
+			<!-- //Forecast -->
+			<div class="clear"></div>
+		
+
+		</div>
+		<!-- //Container -->
+
+
+
+	<!-- Footer -->
+	<div class="footer">
+
+		
+
+	</div>
+	<!-- //Footer -->
+
+
+
+	<!-- Custom-JavaScript-Files -->
+
+		<!-- Time-JavaScript -->
+		<script>
+			function startTime() {
+				var today = new Date();
+				var h = today.getHours();
+				var m = today.getMinutes();
+				var s = today.getSeconds();
+				m = checkTime(m);
+				s = checkTime(s);
+				document.getElementById('txt').innerHTML =
+				h + ":" + m + ":" + s;
+				var t = setTimeout(startTime, 500);
+				}
+				function checkTime(i) {
+				if (i < 10) {i = "0" + i}; // add zero in front of numbers < 10
+				return i;
+			}
+		</script>
+		<!-- //Time-JavaScript -->
+
+	<!-- //Custom-JavaScript-File-Links -->
+	<footer>
+		Copyright © 2016 Company Name | More Templates 模板之家 - Collect from 网页模板
+	</footer>
+
+</body>
+</html>
